@@ -6,10 +6,28 @@ type IEnumerable[T any] interface {
 	Reset()
 }
 
-type Collection[K comparable, T any] interface {
-	[]T | map[K]T
+type enumerableSlice[T any] struct {
+	data  []T
+	index int
 }
 
-// type enumerable [T []T |] struct {
+func NewLinQS[T any](slice []T) IEnumerable[T] {
+	e := enumerableSlice[T]{
+		data:  []T{},
+		index: 0,
+	}
+	return &e
+}
 
-// }
+func (e *enumerableSlice[T]) MoveNext() bool {
+	return false
+}
+
+func (e *enumerableSlice[T]) Current() T {
+	return e.data[e.index]
+}
+
+func (e *enumerableSlice[T]) Reset() {
+	e.index = 0
+	return
+}
