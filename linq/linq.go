@@ -167,6 +167,7 @@ func GroupByDistinct[T any, R comparable](e Linq[T], groupByFunc func(T) R) map[
 	return groupData
 }
 
+//
 func Count[T any](e Linq[T]) int {
 	count := 0
 	if IsEmpty(e) {
