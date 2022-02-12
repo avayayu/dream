@@ -7,7 +7,6 @@ func SliceEqual[T comparable](a, b []T) bool {
 	if len(a) != len(b) {
 		return false
 	}
-
 	for i := range a {
 		if a[i] != b[i] {
 			return false
@@ -15,3 +14,5 @@ func SliceEqual[T comparable](a, b []T) bool {
 	}
 	return true
 }
+
+
