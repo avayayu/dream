@@ -1,0 +1,18 @@
+{
+    "go.goroot": "/home/programs/go",
+    "go.formatTool": "goformat",
+    "go.testEnvVars": {
+        "cloudbrainMode": "dev"
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "gopls": {
+        "usePlaceholders": true,
+        "completeUnimported": true
+    },
+}
